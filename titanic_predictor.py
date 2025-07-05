@@ -501,10 +501,10 @@ def main():
     
     # Create example passenger data (matching the feature order)
     example_passenger = [
-        3,    # Pclass (3rd class)
-        0,    # Sex_numeric (male)
-        22,   # Age
-        1,    # SibSp
+        1,    # Pclass (3rd class)
+        1,    # Sex_numeric (male)
+        25,   # Age
+        0,    # SibSp
         0,    # Parch
         7.25, # Fare
         2,    # FamilySize
@@ -513,13 +513,6 @@ def main():
         0, 0, 1, 0, 0,  # AgeGroup (Adult)
         1, 0, 0, 0      # FareGroup (Low)
     ]
-    
-    print("👤 Example passenger:")
-    print("   • 3rd class male passenger")
-    print("   • Age: 22")
-    print("   • Traveling with 1 sibling/spouse")
-    print("   • Fare: $7.25")
-    print("   • Embarked from Southampton")
     
     prediction, probability = predictor.predict_survival(example_passenger)
     
